@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Web Developer</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+position:sticky;
+top:0;
+background:#0f172a;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#22c55e;
+}
+
+.nav-links{
+display:flex;
+gap:40px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+color:#22c55e;
+}
+
+/* HERO */
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:70px 80px;
+min-height:90vh;
+}
+
+.hero-image img{
+width:420px;
+border-radius:20px;
+filter:grayscale(100%);
+}
+
+.hero-content{
+max-width:520px;
+}
+
+.hero-content h1{
+font-size:60px;
+margin:20px 0;
+}
+
+.hero-content span{
+color:#22c55e;
+}
+
+.description{
+color:#cbd5e1;
+margin-bottom:30px;
+line-height:1.6;
+}
+
+.btn{
+background:#22c55e;
+padding:14px 28px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+border-radius:8px;
+}
+
+/* ABOUT */
+.about{
+padding:80px;
+text-align:center;
+}
+
+.about h2{
+margin-bottom:20px;
+color:#22c55e;
+}
+
+/* SERVICES */
+.services{
+padding:80px;
+text-align:center;
+}
+
+.services h2{
+color:#22c55e;
+margin-bottom:40px;
+}
+
+.service-box{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+width:260px;
+border-radius:12px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#22c55e;
+color:black;
+}
+
+/* CONTACT */
+.contact{
+padding:80px;
+text-align:center;
+}
+
+.contact h2{
+color:#22c55e;
+margin-bottom:20px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:400px;
+margin:auto;
+}
+
+input,textarea{
+padding:12px;
+border:none;
+border-radius:6px;
+}
+
+button{
+padding:12px;
+background:#22c55e;
+border:none;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+margin-top:50px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.hero{
+flex-direction:column;
+text-align:center;
+gap:40px;
+}
+
+.hero-image img{
+width:280px;
+}
+
+.navbar{
+padding:20px 30px;
+}
+
+.hero-content h1{
+font-size:40px;
+}
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Developer</div>
+    <ul class="nav-links">
+        <li><a href="#home" class="active">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&crop=face" alt="profile">
+    </div>
+
+    <div class="hero-content">
+        <p class="subtitle">HELLO I'M</p>
+        <h1>Ashish <br><span>Web Developer</span></h1>
+
+        <p class="description">
+            I create modern responsive websites using HTML, CSS and JavaScript.
+            I focus on clean UI and smooth user experience.
+        </p>
+
+        <a href="#contact" class="btn">Contact Me</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <h2>About Me</h2>
+    <p>
+        I'm a passionate web developer who loves building beautiful and fast websites.
+        I enjoy learning new technologies and improving my coding skills every day.
+    </p>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+    <h2>My Services</h2>
+
+    <div class="service-box">
+        <div class="card">
+            <h3>Website Design</h3>
+            <p>Modern responsive UI design for all devices.</p>
+        </div>
+
+        <div class="card">
+            <h3>Frontend Development</h3>
+            <p>HTML CSS JavaScript clean coding structure.</p>
+        </div>
+
+        <div class="card">
+            <h3>Website Optimization</h3>
+            <p>Speed optimization and performance improvement.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Ashish | Portfolio Website</p>
+</footer>
+
+</body>
+</html>
